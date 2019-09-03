@@ -9,7 +9,7 @@
                     </ul>
                     <?php $recommended=M()->table('index_recommended n,index_relevance r')->where('r.classify_id =212 and r.content_id=n.recommended_id')->order('date desc')->select();foreach($recommended as $k=>$v){?>
                         <a class="top_post_item zhan_post" href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['recommended_title'];?>" style="" target="_blank" data-wpel-link="internal">
-                            <img src="<?php echo $v['recommended_pic'];?>" alt="<?php echo $v['recommended_title'];?>"	            	<div class="news-inner"><p><?php echo $v['recommended_title'];?></p><span class="views">阅读 33,480</span><span class="comment"><?php echo cover_time($v['date'],'Y/m/d')?></span></div>
+                            <img src="<?php echo $v['recommended_pic'];?>" alt="<?php echo $v['recommended_title'];?>"	            	<div class="news-inner"><p><?php echo $v['recommended_title'];?></p><span class="views">阅读 <?php echo $v['recommended_traffic'];?>次</span><span class="comment"><?php echo cover_time($v['date'],'Y/m/d')?></span></div>
                             <div class="clear"></div>
                         </a>
                     <?php }?>

@@ -1,5 +1,5 @@
 <?php
-class  techniquesAction extends Action {
+class showAction extends Action {
     public function index(){
 		$this->display();
     }

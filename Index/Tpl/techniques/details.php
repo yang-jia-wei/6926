@@ -21,7 +21,7 @@
                         <a href="http://www.puawm.com/41151" rel="nofollow" target="_blank" data-wpel-link="internal"></a>&nbsp;
 															</span>
                         <span class="date"><?php echo cover_time($techniques['date'],'Y/m/d')?>&nbsp;</span>
-                        <span class="views">  浏览量 1,205</span>
+                        <span class="views">  浏览量 <?php echo $techniques['techniques_traffic'];?></span>
 
 
 

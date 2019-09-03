@@ -21,7 +21,7 @@
                         <a href="http://www.puawm.com/41151" rel="nofollow" target="_blank" data-wpel-link="internal"></a>&nbsp;
 															</span>
                         <span class="date"><?php echo cover_time($badbody['date'],'Y/m/d')?>&nbsp;</span>
-                        <span class="views">  浏览量 1,205</span>
+                        <span class="views">  浏览量<?php echo $badbody['badbody_traffic'];?></span>
 
 
 
@@ -66,7 +66,7 @@
                     <div class="clear"></div>
                     <div class="cat-site">
                         <ul class="cat-one-list">
-                            <?php $badbody=M()->table('index_badbody n,index_relevance r')->where('r.classify_id =207 and r.content_id=n.badbody_id')->order('date desc')->select();foreach($badbody as $k=>$v){ ?>
+                            <?php $badbody=M()->table('index_badbody n,index_relevance r')->where('r.classify_id =208 and r.content_id=n.badbody_id')->order('date desc')->select();foreach($badbody as $k=>$v){ ?>
                                 <div class="cat-lists"><div class="item-st"><div class="thimg"><a href="<?php echo content_url($v['type_id'],$v['badbody_id'])?>" data-wpel-link="internal"><img src="<?php echo $v['badbody_pic'];?>" alt="<?php echo $v['badbody_title'];?>”"></a></div><p><a href="<?php echo content_url($v['type_id'],$v['badbody_id'])?>" data-wpel-link="internal"><?php echo $v['badbody_title'];?></a></p></div>
                                 </div>
                             <?php } ?>

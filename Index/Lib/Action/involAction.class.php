@@ -1,29 +1,10 @@
 <?php
-class techniquesAction extends Action {
+class involAction extends Action {
     public function index(){
 		$this->display();
     }
 
     public function details(){
-        //浏览量
-        $site =get_site();
-
-        $p=pg('p')==''?1:pg('p');
-        $classify_id=get_classify_id();
-        $content_id=pg('content_id');
-        $type_id=get_type_id();
-        
-        $dir = __FILE__;
-        $file = fopen($dir,"r");
-        if ($file){
-            if (!feof($file)) { //判断是否到最后一行
-                $techniques = M('techniques')->where(array('type_id' => $type_id, 'techniques_id' => $content_id))->select();
-                $temp = $techniques[0]['techniques_traffic']+1;
-                M('techniques')-> where(array('type_id' => $type_id, 'techniques_id' => $content_id))->setField('techniques_traffic',$temp);
-
-            }
-
-        }
         $this->display();
     }
 	public function add_save()

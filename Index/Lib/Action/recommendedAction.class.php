@@ -5,6 +5,25 @@ class recommendedAction extends Action {
     }
 
     public function details(){
+        //浏览量
+        $site =get_site();
+
+        $p=pg('p')==''?1:pg('p');
+        $classify_id=get_classify_id();
+        $content_id=pg('content_id');
+        $type_id=get_type_id();
+
+        $dir = __FILE__;
+        $file = fopen($dir,"r");
+        if ($file){
+            if (!feof($file)) { //判断是否到最后一行
+                $recommended = M('recommended')->where(array('type_id' => $type_id, 'recommended_id' => $content_id))->select();
+                $temp = $recommended[0]['recommended_traffic']+1;
+                M('recommended')-> where(array('type_id' => $type_id, 'recommended_id' => $content_id))->setField('recommended_traffic',$temp);
+
+            }
+
+        }
         $this->display();
     }
 	public function add_save()

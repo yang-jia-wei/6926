@@ -109,7 +109,7 @@
                                             <?php echo $v['gossip_remarks'];?>						</div>
                                         <div class="archive-tag">
                                             <span class="date"><?php echo cover_time($v['date'],'Y-m-d')?></span>
-                                            <span class="views">  阅读 811 次  </span></div>
+                                            <span class="views">  阅读 <?php echo $v['gossip_traffic'];?>	 次  </span></div>
                                         <div class="clear"></div>
                                             </div><!-- .entry-content -->
                                 </div>
@@ -122,7 +122,7 @@
                                             <h3><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><?php echo $v['gossip_title'];?></a></h3>
                                             <div class="pricebtn"><span class="archive-tag">
 								<span class="date"><?php echo cover_time($v['date'],'Y-m-d')?></span>
-								<span class="views">  阅读 899 次  </span></span></div>
+								<span class="views">  阅读 <?php echo $v['gossip_traffic']; ?> 次  </span></span></div>
                                         </div>
                                     </div>
                                 </ul>
