@@ -16,7 +16,9 @@
         </div>
         <div class="clear"></div>
     </div>
-    <nav class="breadcrumb" style="height:1px;line-height:1px;"></nav>
+    <nav class="breadcrumb" style="height:1px;line-height:1px;">
+
+    </nav>
     <div id="content" class="site-content" style="transform: none;">
         <div id="gensui" style="transform: none;">
             <div id="primary" class="content-area">

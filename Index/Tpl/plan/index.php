@@ -1,6 +1,6 @@
 <?php require APP_ROOT.'public/head.php';?>
 <?php require APP_ROOT.'public/top.php';?>
-<nav class="breadcrumb"><a title="返回首页" href="http://www.puawm.com/" data-wpel-link="internal">首页</a> &gt; <a href="http://www.puawm.com/category/%e6%8a%8a%e5%a6%b9%e6%8a%80%e5%b7%a7" data-wpel-link="internal">型男计划</a> &gt;  文章 </nav><div id="content" class="site-content" style="transform: none;">
+<nav class="breadcrumb"><a title="返回首页" href="" data-wpel-link="internal">首页</a> &gt; <a href="" data-wpel-link="internal">型男计划</a> &gt;  文章 </nav><div id="content" class="site-content" style="transform: none;">
     <div class="clear"></div>
 
 
@@ -13,7 +13,7 @@
                 foreach($plan as $k=>$v){  ?>
                     <article id="post-41145" class="archive-list">
                         <figure class="thumbnail box-hide">
-                            <a href="http://www.puawm.com/41145" data-wpel-link="internal">
+                            <a href="41145" data-wpel-link="internal">
                                 <img src="<?php echo $v['plan_pic'];?>" alt="<?php echo $v['plan_title'];?>"></a>
                         </figure>
                         <header class="entry-header">
@@ -24,7 +24,7 @@
 
 			<span class="entry-meta">
 				<span class="post_cat">
-				<a href="http://www.puawm.com/category/%e6%8a%8a%e5%a6%b9%e6%8a%80%e5%b7%a7" rel="category tag" data-wpel-link="internal"><?php $classify=M('classify')->where(array('classify_id'=>207))->find();echo $classify['classify_name'];?></a>			</span>
+				<a href="" rel="category tag" data-wpel-link="internal"><?php $classify=M('classify')->where(array('classify_id'=>207))->find();echo $classify['classify_name'];?></a>			</span>
 				<span class="post_spliter">•</span>
 				<span class="date" title="2019/08/29 19:36">4天前</span>
 			</span>

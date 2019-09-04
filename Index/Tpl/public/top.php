@@ -23,24 +23,29 @@
                 <div id="site-nav-wrap">
                     <div id="sidr-close"><a href="" class="toggle-sidr-close" data-wpel-link="internal">X</a>
                     </div>
-
                     <nav id="site-nav" class="main-nav">
-                        <a href="#sidr-main" id="navigation-toggle" class="bars" data-wpel-link="internal"><i class="_mi _before dashicons dashicons-menu" style="font-size:2em;"></i></a>
+                        <a href="" id="navigation-toggle" class="bars" data-wpel-link="internal"><i class="_mi _before dashicons dashicons-menu" style="font-size:2em;"></i></a>
+
 
                         <div class="menu-%e9%a1%b6%e9%83%a8-container">
                             <ul id="menu-%e9%a1%b6%e9%83%a8" class="down-menu nav-menu sf-js-enabled sf-arrows">
-
                                 <?php $list=M('classify')->where(array('classify_pid'=>2))->order('date asc')->select();
-                                foreach($list as $k=>$v){             
-                                    ?>
+                                foreach($list as $k=>$v){
+                                ?>
+
                                 <li id="menu-item-30" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30"><a href="<?php echo classify_url($v['type_id'],$v['classify_id']);?>" data-wpel-link="internal">
                                         <?php if($v['classify_id'] ==211){ ?>
-                                        <i class="_mi _before dashicons dashicons-format-video" aria-hidden="true"></i>
+                                            <i class="_mi _before dashicons dashicons-format-video" aria-hidden="true"></i>
+                                        <?php }?>
+                                        <?php if($v['classify_id'] == 3){ ?>
+                                            <i class="_mi _before dashicons dashicons-admin-home" aria-hidden="true"></i>
                                         <?php }?>
                                         <?php echo $v['classify_name'];?></a></li>
+
                                 <?php }?>
                             </ul>
                         </div>
+
 
                     </nav>
                 </div><!-- #site-nav-wrap -->
