@@ -27,7 +27,8 @@
 
                             <div class="archive-content">
                                 <?php echo $v['techniques_content'];?>	</div>
-                            <div class="archive-tag"><span class="views">  阅读 1,002 次  </span></div>
+<!--                            --><?php ?>
+                            <div class="archive-tag"><span class="views">  阅读 <?php echo $v['techniques_traffic'];?> 次  </span></div>
                             <div class="clear"></div>
                         </div><!-- .entry-content -->
                     </article>
