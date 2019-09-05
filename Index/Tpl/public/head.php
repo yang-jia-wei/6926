@@ -29,7 +29,7 @@
     if($balance=='')$balance=0.00;
     $mobile_url='mobile.php?'.$_SERVER["QUERY_STRING"];
     ?>
-    <title>PUA靓男学院 | 倡导正向恋爱撩妹套路与技巧_教你怎么追女生</title><meta name="description" content="传递正确恋爱价值观，专注解决恋爱把妹问题，提供包括：撩妹套路、恋爱课程、把妹技巧、恋爱方法、微信聊天、约会攻略、狙击女神、挽回爱情、婚恋交友、相亲找对象等各类恋爱情感资讯，以及时下最流行的男性时尚资讯与服装搭配攻略。">
+    <title><?php echo $site['company_name'];?></title><meta name="description" content="传递正确恋爱价值观，专注解决恋爱把妹问题，提供包括：撩妹套路、恋爱课程、把妹技巧、恋爱方法、微信聊天、约会攻略、狙击女神、挽回爱情、婚恋交友、相亲找对象等各类恋爱情感资讯，以及时下最流行的男性时尚资讯与服装搭配攻略。">
     <meta name="keywords" content="撩妹套路,浪迹情感,把妹技巧,微信聊天,约会攻略,恋爱课程,泡妞秘籍,征婚相亲">
     <link rel="shortcut icon" href="http://www.puawm.com/wp-content/themes/Nana3.23/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="114x114" href="http://www.puawm.com/wp-content/themes/Nana3.23/images/favicon.png">

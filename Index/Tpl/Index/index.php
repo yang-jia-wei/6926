@@ -35,6 +35,7 @@
                                 <div class="clear"></div>
                                 <div class="cat-site">
                                     <?php $techniques=M()->table('index_techniques n,index_relevance r')->where('r.classify_id =207 and r.content_id=n.techniques_id')->order('date desc')->select();foreach($techniques as $k=>$v){
+                                        if($k < 8){
                                     if($k==0){          ?>
                                     <div class="item">
                                         <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal">
@@ -51,6 +52,7 @@
                                         <li class="list-title"><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['techniques_title'];?>" data-wpel-link="internal"><?php echo $v['techniques_title'];?></a></li>
                                     <?php }?>
                                    </ul>
+                                        <?php }?>
                                     <?php }?>
 
                                 </div>
@@ -66,6 +68,7 @@
                                 <div class="clear"></div>
                                 <div class="cat-site">
                                     <?php $badbody=M()->table('index_techniques n,index_relevance r')->where('r.classify_id =208 and r.content_id=n.techniques_id')->order('date desc')->select();foreach($badbody as $k=>$v){
+                                        if($k<8){
                                         if($k==0){          ?>
                                             <div class="item">
                                                 <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal">
@@ -82,6 +85,7 @@
                                             <li class="list-title"><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['techniques_title'];?>" data-wpel-link="internal"><?php echo $v['techniques_title'];?></a></li>
                                         <?php }?>
                                         </ul>
+                                        <?php }?>
                                     <?php }?>
 
                                 </div>

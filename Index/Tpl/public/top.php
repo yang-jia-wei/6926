@@ -14,7 +14,7 @@
                 <hgroup class="logo-site">
                     <h1 class="site-title">
                         <a href="index.php" title="PUA靓男学院 | 倡导正向恋爱撩妹套路与技巧_教你怎么追女生" data-wpel-link="internal">
-                            <img src="images/logo.png" alt="PUA靓男学院 | 倡导正向恋爱撩妹套路与技巧_教你怎么追女生" title="PUA靓男学院 | 倡导正向恋爱撩妹套路与技巧_教你怎么追女生" width="220" height="50">
+                            <img src="<?php echo $site['logo_img'];?>" alt="PUA靓男学院 | 倡导正向恋爱撩妹套路与技巧_教你怎么追女生" title="PUA靓男学院 | 倡导正向恋爱撩妹套路与技巧_教你怎么追女生" width="220" height="50">
                             <span>PUA靓男学院</span>
                         </a>
                     </h1>

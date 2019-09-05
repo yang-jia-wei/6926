@@ -7,12 +7,11 @@
                         <li id="zhan_post" class="top_post_filter_active"><?php $classify=M('classify')->where(array('classify_id'=>212))->find();echo $classify['classify_name'];?></li>
                         <div class="clear"></div>
                     </ul>
-                    <?php $technique=M()->table('index_techniques')->where('techniques_star=1')->order('date desc')->select();        
-                    foreach($technique as $k=>$v){?>
-                        <a class="top_post_item zhan_post" href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['techniques_title'];?>" style="" target="_blank" data-wpel-link="internal">
-                            <img src="<?php echo $v['techniques_pic'];?>" alt="<?php echo $v['techniques_title'];?>"	            	<div class="news-inner"><p><?php echo $v['techniques_title'];?></p><span class="views">阅读 <?php echo $v['techniques_traffic'];?>次</span><span class="comment"><?php echo cover_time($v['date'],'Y/m/d')?></span></div>
-                            <div class="clear"></div>
-                        </a>
+                    <?php $technique=M()->table('index_techniques')->where('techniques_star=1')->order('date desc')->select();
+                                       foreach($technique as $k=>$v){?>
+                    <a class="top_post_item zhan_post" href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['techniques_title'];?>" style="" target="_blank" data-wpel-link="internal"><img src="<?php echo $v['techniques_pic'];?>" alt="<?php echo $v['techniques_title'];?>">	            	<div class="news-inner"><p><?php echo $v['techniques_title'];?></p><span class="views">阅读<?php echo $v['techniques_traffic'];?></span><span class="comment"><?php echo cover_time($v['date'],'Y/m/d')?></span></div>
+                        <div class="clear"></div>
+                        <div></div><div></div></a>
                     <?php }?>
 
 
