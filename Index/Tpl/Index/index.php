@@ -65,13 +65,13 @@
                                 </h3>
                                 <div class="clear"></div>
                                 <div class="cat-site">
-                                    <?php $badbody=M()->table('index_badbody n,index_relevance r')->where('r.classify_id =208 and r.content_id=n.badbody_id')->order('date desc')->select();foreach($badbody as $k=>$v){        
+                                    <?php $badbody=M()->table('index_techniques n,index_relevance r')->where('r.classify_id =208 and r.content_id=n.techniques_id')->order('date desc')->select();foreach($badbody as $k=>$v){
                                         if($k==0){          ?>
                                             <div class="item">
                                                 <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal">
-                                                    <img  src="<?php echo $v['badbody_pic'];?>" alt="<?php echo $v['techniques_title'];?>"></a>
+                                                    <img  src="<?php echo $v['techniques_pic'];?>" alt="<?php echo $v['techniques_title'];?>"></a>
                                                 <div style="z-index: 1;">
-                                                    <span class="txt"><?php echo $v['badbody_title'];?></span>
+                                                    <span class="txt"><?php echo $v['techniques_title'];?></span>
                                                     <span class="txt-bg"></span>
                                                 </div>
                                             </div>
@@ -79,7 +79,7 @@
                                             <ul class="cat-list">
                                         <?php } else{?>
                                             <span class="list-date"><?php echo cover_time($v['date'],'m/d')?></span>
-                                            <li class="list-title"><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['badbody_title'];?>" data-wpel-link="internal"><?php echo $v['badbody_title'];?></a></li>
+                                            <li class="list-title"><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" title="<?php echo $v['techniques_title'];?>" data-wpel-link="internal"><?php echo $v['techniques_title'];?></a></li>
                                         <?php }?>
                                         </ul>
                                     <?php }?>
@@ -97,21 +97,21 @@
                             <div class="clear"></div>
                             <div class="cat-site">
                                 <div class="cat-dt">
-                                    <?php $gossip=M()->table('index_gossip n,index_relevance r')->where('r.classify_id =209 and r.content_id=n.gossip_id')->order('date desc')->select();
+                                    <?php $gossip=M()->table('index_techniques n,index_relevance r')->where('r.classify_id =209 and r.content_id=n.techniques_id')->order('date desc')->select();
                                     foreach($gossip as $k=>$v){
                                         if($k ==0){            ?>
                                     <figure class="line-one-thumbnail">
-                                        <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><img src="<?php echo $v['gossip_pic'];?>" alt="<?php echo $v['gossip_title'];?>"></a>
+                                        <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><img src="<?php echo $v['techniques_pic'];?>" alt="<?php echo $v['techniques_title'];?>"></a>
                                     </figure>
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" target="_blank" data-wpel-link="internal"><?php echo $v['gossip_title'];?></a></h2>
+                                        <h2 class="entry-title"><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" target="_blank" data-wpel-link="internal"><?php echo $v['techniques_title'];?></a></h2>
                                     </header><!-- .entry-header -->
                                     <div class="entry-content">
                                         <div class="archive-content">
-                                            <?php echo $v['gossip_remarks'];?>						</div>
+                                            <?php echo $v['techniques_remarks'];?>						</div>
                                         <div class="archive-tag">
                                             <span class="date"><?php echo cover_time($v['date'],'Y-m-d')?></span>
-                                            <span class="views">  阅读 <?php echo $v['gossip_traffic'];?>	 次  </span></div>
+                                            <span class="views">  阅读 <?php echo $v['techniques_traffic'];?>	 次  </span></div>
                                         <div class="clear"></div>
                                             </div><!-- .entry-content -->
                                 </div>
@@ -120,11 +120,11 @@
                                     <div class="cat-lists">
                                         <div class="item-st">
                                             <div class="thimg">
-                                                <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><img src="<?php echo $v['gossip_pic'];?>" alt="<?php echo $v['gossip_title'];?>"></a>						</div>
-                                            <h3><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><?php echo $v['gossip_title'];?></a></h3>
+                                                <a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><img src="<?php echo $v['techniques_pic'];?>" alt="<?php echo $v['techniques_title'];?>"></a>						</div>
+                                            <h3><a href="<?php echo content_url($v['type_id'],$v['content_id']);?>" data-wpel-link="internal"><?php echo $v['techniques_title'];?></a></h3>
                                             <div class="pricebtn"><span class="archive-tag">
 								<span class="date"><?php echo cover_time($v['date'],'Y-m-d')?></span>
-								<span class="views">  阅读 <?php echo $v['gossip_traffic']; ?> 次  </span></span></div>
+								<span class="views">  阅读 <?php echo $v['techniques_traffic']; ?> 次  </span></span></div>
                                         </div>
                                     </div>
                                 </ul>

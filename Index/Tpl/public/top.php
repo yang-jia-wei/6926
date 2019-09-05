@@ -19,7 +19,7 @@
                         </a>
                     </h1>
                 </hgroup><!-- .logo-site -->			
-<!--                <span class="nav-search"><i class="fa fa-search" style="font-size:1.2em;"></i></span>-->
+                <span class="nav-search  dianjis"><i class="fa fa-search" style="font-size:1.2em;"></i></span>
                 <div id="site-nav-wrap">
                     <div id="sidr-close"><a href="" class="toggle-sidr-close" data-wpel-link="internal">X</a>
                     </div>
@@ -53,3 +53,31 @@
         </div><!-- #menu-box -->
     </header><!-- #masthead -->
 
+
+<div id="main-search">
+        
+    <div id="searchbartag" class="plxiaoshi">
+    <ul id="alert_box_tags">
+        <?php $label=M()->table('index_label n,index_relevance r')->where('r.classify_id =217 and r.content_id=n.label_id')->order('date desc')->select();foreach($label as $k=>$v){
+            ?>
+    <li class="alert_box_tags_item">
+        <a href="<?php echo classify_url($v['type_id'],$v['classify_id']);?>&label_id=<?php echo $v['label_id']; ?>" title="<?php echo $v['label_title'];?>" rel="tag" target="_blank" data-wpel-link="internal"><?php echo $v['label_title'];?></a>
+        <?php }?>
+    </li>
+        
+        <div class="clear"></div>
+            </ul>
+<!--            <ul id="alert_box_more">-->
+<!--                <li class="alert_box_more_left"></li>-->
+<!--                <p class="alert_box_more_main"><a href="http://www.puawm.com/6-2" target="_blank" data-wpel-link="internal">查看更多热门标签</a></p>-->
+<!--                <li class="alert_box_more_right"></li>-->
+<!--                <div class="clear"></div>-->
+<!--            </ul>-->
+</div>      
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+$(".dianjis").click(function(){
+    $("#main-search").slideToggle(500);
+});
+</script>

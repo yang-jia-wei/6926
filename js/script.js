@@ -24,9 +24,9 @@ $('#current-page-selector').keypress(function(event){
 	}
 });	
 // 搜索
-$(".nav-search").click(function(){
+/*$(".dianjis").click(function(){
 	$("#main-search").slideToggle(500);
-});
+});*/
 	
 // 侧边栏文章切换
     $('#top_post').find('.top_post_item').hide();
