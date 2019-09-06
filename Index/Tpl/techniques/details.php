@@ -12,7 +12,7 @@
                         <img src="<?php $classify=M('classify')->where(array('classify_id'=>211))->find();echo $classify['classify_img'];?>"></a></div></div>
             <article id="post-41151" class="post-41151 post type-post status-publish format-standard hentry category-5">
                 <header class="entry-header">
-                    <h1 class="entry-title"><?php echo $techniques['techniques_title'];?>></h1>
+                    <h1 class="entry-title"><?php echo $techniques['techniques_title'];?></h1>
                     <div class="single_info">
 							<span class="xiaoshi">
                             <span class="leixing">

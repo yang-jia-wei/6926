@@ -5,7 +5,7 @@
         <nav id="top-header">
             <div class="top-nav">
                 <div id="user-profile">
-                    <?php echo $site['company_name'];?>
+                    <span style="color: red;"><?php echo $site['company_name'];?>   </span>
                 </div>
             </div>
         </nav><!-- #top-header -->
