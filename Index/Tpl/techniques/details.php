@@ -78,5 +78,6 @@
             </div>									</main><!-- .site-main -->
     </div><!-- .content-area -->
     <?php require APP_ROOT.'public/right.php';?>
+</div><div class="clear"></div>
                         <?php require APP_ROOT.'public/foot.php';?>
 

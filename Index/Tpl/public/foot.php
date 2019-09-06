@@ -1,9 +1,10 @@
+<!--<div class="clear"></div>-->
 <div id="footer" alog-group="log-footer">
     <div class="foot">
 
                 <div id="links">
                     <ul class="linkcat">
-                        <li>业务合作、广告租赁请联系：QQ6603183（限正规情感机构）</li>
+                        <li>业务合作、广告租赁请联系：QQ<?php echo $site['qq'];?>（限正规情感机构）</li>
                     </ul>
                     <div class="clear"></div>
                 </div>
@@ -11,13 +12,22 @@
             <div class="p p2">
 <!--                --><?php //echo $site['inscribe'];?>
                 <div class="p-content">
-                    <?php echo $site['inscribe'];?>
-<!--                    <p class="t2">站点相关</p>-->
-<!--                    <ul>-->
-<!--                        <li><span class="post_spliter">•</span><a href="http://www.puawm.com/1741" target="_blank" data-wpel-link="internal">课程中心</a></li><li><span class="post_spliter">•</span><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=6603183&amp;site=qq&amp;menu=yes" rel="nofollow external noopener noreferrer" target="_blank" data-wpel-link="external">官方客服</a></li><li><span class="post_spliter"></span></li><li><span class="post_spliter">•</span><a href="http://www.puawm.com/sitemap.xml" target="_blank" data-wpel-link="internal">网站地图</a></li></ul>-->
+<!--                    --><?php //echo $site['inscribe'];?>
+                    <p class="t2">站点相关</p>
+                    <ul>
+                        <li>
+                            <span class="post_spliter">•</span><a href="?m=course&a=index&classify_id=211" target="_blank" data-wpel-link="internal">课程中心</a>
+                        </li>
+                        <li><span class="post_spliter">•</span><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=<?php echo $site['qq'];?>&amp;site=qq&amp;menu=yes" rel="nofollow external noopener noreferrer" target="_blank" data-wpel-link="external">官方客服</a>
+                        </li>
+                        <li><span class="post_spliter"></span>
+                        </li>
+                        <li><span class="post_spliter">•</span><a href="javascript:;" target="_blank" data-wpel-link="internal">网站地图</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="clear"></div>
-                <div class="site-info">Copyright ©  靓男学院 | 闽ICP备14014578号-1</div>
+                <div class="site-info"><?php echo $site['inscribe'];?></div>
             </div>
             <!-- 若要删除版权请自觉赞助懿古今(支付宝：yigujin@qq.com)20元，谢谢支持 -->
             <div class="p p3">
@@ -25,13 +35,14 @@
                     <p class="t2">欢迎您关注我们</p>
                     <div class="qcode clearfix">
                         <div class="img-container">
-                            <img src="images/1558893200.jpg" alt="PUA靓男学院的公众号">
+                            <img src="<?php echo $site['site_img'];?>" alt="PUA靓男学院的公众号">
                         </div>
                         <div class="link-container">
-                            <a href="" target="_blank" data-wpel-link="internal">
-                                课程中心</a>
                             <?php $classify=M('classify')->where(array('classify_id'=>211))->find();?>
                             <a href="<?php echo classify_url($classify['type_id'],$classify['classify_id']);?>" target="_blank" data-wpel-link="internal">
+                                课程中心</a>
+
+                            <a href="index.php" target="_blank" data-wpel-link="internal">
                                 网站首页</a>
                         </div>
                     </div>

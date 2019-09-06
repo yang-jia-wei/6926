@@ -20,13 +20,9 @@
 
 			<span class="entry-meta">
 				<span class="post_cat">
-				<a href="" rel="category tag" data-wpel-link="internal"><?php $classify=M('classify')->where(array('classify_id'=>207))->find();echo $classify['classify_name'];?></a>			</span>
+				<a href="http://www.puawm.com/category/%e6%8a%8a%e5%a6%b9%e6%8a%80%e5%b7%a7" rel="category tag" data-wpel-link="internal"><?php $classify=M('classify')->where(array('classify_id'=>207))->find();echo $classify['classify_name'];?></a>			</span>
 				<span class="post_spliter">•</span>
-                <?php $date1 = date_create(cover_time($v['date'])); $date2 = date_create(date('Y-m-d')); $day = date_diff($date1, $date2); ?>
-				<span class="date" title="<?php echo cover_time($v['date'],'Y-m-d H:i:s');?>">
-
-                    <?php echo $day->format('%a 天');?>前
-                </span>
+				<span class="date" title="2019/08/29 19:36">4天前</span>
 			</span>
 
                             <div class="archive-content">
@@ -35,9 +31,9 @@
                             <div class="clear"></div>
                         </div><!-- .entry-content -->
                     </article>
-                    <?php if (is_int($k / 3)) { ?>
-                        <div class="abc-pc abc-site"><a href="?m=course&a=index&classify_id=211" target="_blank" data-wpel-link="internal"><img src="<?php $classify=M('classify')->where(array('classify_id'=>211))->find();echo $classify['classify_img'];?>"></a></div>
-                    <?php }?>
+                    <?php if(!empty($v['techniques_large'])){ ?>
+                    <div class="abc-pc abc-site"><a href="?m=course&a=index&classify_id=211" target="_blank" data-wpel-link="internal"><img src="<?php echo $v['techniques_large'];?>"></a></div>
+                    <?php } ?>
                 <?php }?>
                 </ul>
 
